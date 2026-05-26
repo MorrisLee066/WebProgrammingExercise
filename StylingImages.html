@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Styling Images</title>
+  
+<style>
+body {
+  display: flex;
+}
+
+.img-box {
+  width: 33%;
+}
+
+.img1 {
+  width: 100%;
+  height: 300px;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 2px;
+  background: white;
+  border: 2px solid gray;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.img2 {
+  width: 100%;
+  height: 300px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="img-box">
+  <img src="https://picsum.photos/450/240" class="img1">
+</div>
+
+<div>
+  <img src="https://picsum.photos/300" class="circle">
+</div>
+
+<div class="img-box">
+  <img src="https://picsum.photos/450/240" class="img2">
+</div>
+
+</body>
+</html>

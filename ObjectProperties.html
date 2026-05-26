@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Object Properties</title>
+  </head>
+  <body>
+    
+    <h2>Object Properties</h2>
+    <p id="before"></p>
+    
+    <h2>Object After Deleting age Property</h2>
+    <p id="after"></p>
+    
+    <script>
+        var Person = {
+            firstName : "Tony",
+            lastName : "Lee",
+            age : 50,
+            eyeColor : "Blue"
+        };
+    
+        let properties = "";
+        for (let key in Person) {
+            properties += key + ": " + Person[key] + "<br>";
+        }
+    
+        document.getElementById("before").innerHTML = properties;
+    
+        delete Person.age;
+    
+        let updatedProperties = "";
+        for (let key in Person) {
+            updatedProperties += key + ": " + Person[key] + "<br>";
+        }
+    
+        document.getElementById("after").innerHTML = updatedProperties;
+    </script>
+    
+  </body>
+</html>

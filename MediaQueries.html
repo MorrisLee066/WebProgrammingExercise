@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Media Queries</title>
+<style>
+  body {
+    background: #6fa0d6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box {
+    margin: 0;
+  }
+
+  .header {
+    background: #a8c65c;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .content-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+    flex: 1;
+  }
+
+  .content {
+    background: #5fa8b5;
+    flex: 1;
+  }
+
+  .footer-group {
+    display: grid;
+    height: 100px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5px;
+    column-gap: 15px;
+    height: 90px;
+  }
+
+  .footer {
+    background: #ccc;
+    height: 100%;
+  }
+
+  @media (min-width: 480px) {
+    .header {
+      height: 130px;
+      margin-bottom: 8px;
+    }
+
+    .content-group {
+      flex-direction: row;
+    }
+
+    .footer-group {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="box header"></div>
+
+  <div class="content-group">
+    <div class="box content"></div>
+    <div class="box content"></div>
+    <div class="box content"></div>
+  </div>
+
+  <div class="footer-group">
+    <div class="box footer"></div>
+    <div class="box footer"></div>
+    <div class="box footer"></div>
+    <div class="box footer"></div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mouse & Button Interaction</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .box {
+        width: 85px;
+        height: 85px;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      #text {
+        font-size: 22px;
+        color: black;
+        margin-bottom: 20px;
+      }
+      button {
+        padding: 4px 10px;
+        font-size: 18px;
+        background: linear-gradient(to bottom, white, lightgray);
+        border: 1px solid #999;
+      }
+    </style>
+  </head>
+  <body>
+  
+    <div class="box">
+      <div id="text">Hello</div>
+      <button id="btn">Button</button>
+    </div>
+    
+    <script>
+      const text = document.getElementById("text");
+      const btn = document.getElementById("btn");
+    
+      btn.addEventListener("mouseover", function() {
+        text.style.color = "magenta";
+        text.textContent = "Hello";
+      });
+    
+      btn.addEventListener("mouseout", function() {
+        text.style.color = "black";
+        text.textContent = "Hello";
+        document.querySelector(".box").style.width = "85px";
+      });
+    
+      btn.addEventListener("click", function() {
+        text.textContent = "Mouse Click";
+        text.style.color = "magenta";
+        document.querySelector(".box").style.width = "120px";
+      });
+    </script>
+  
+  </body>
+</html>
